@@ -2,8 +2,7 @@
     pageEncoding="ISO-8859-1"%>
      <%
 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-response.setHeader("Pragma","no-cache");
-response.setDateHeader("Expires", 0);
+
 %>
 <!DOCTYPE html>  
 <html lang="en">
@@ -50,11 +49,11 @@ response.setDateHeader("Expires", 0);
 	String n=(String)session.getAttribute("uname");
 	if(n==null){
 		%>
-		<%@include file="include/loginHeader.jsp" %>
+		<%@include file="include/header.html" %>
 		<% 
 	}else{
 		%>
-		<%@include file="include/header.html" %>
+		<%@include file="include/loginHeader.jsp" %>
 		<% 
 	}
 	%>
