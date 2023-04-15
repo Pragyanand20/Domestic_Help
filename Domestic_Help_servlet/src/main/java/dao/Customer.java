@@ -1,6 +1,12 @@
 package dao;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
+	@Id @GeneratedValue
 	private int id;
 	private String name;
 	private String phone;
@@ -9,9 +15,9 @@ public class Customer {
 	public Customer() {
 		
 	}
-	public Customer(int id, String name, String phone, String email, String password) {
-		super();
-		this.id = id;
+
+	public Customer(String name, String phone, String email, String password) {
+		
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
